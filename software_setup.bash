@@ -4,5 +4,8 @@
 # Installing Handbrake video/audio encoder
 brew install handbrake
 
-#Installing ffmpeg command-line audio encoder
+# Installing ffmpeg command-line audio encoder
 brew install ffmpeg
+
+# Installing youtube-dl youtube video downloader
+brew install youtube-dl
