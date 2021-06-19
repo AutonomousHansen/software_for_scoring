@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import fnmatch, string
+import regex as re
 
 #List of instrument keys
 
@@ -24,7 +25,7 @@ def format_string(abbr, filename):
 def main():
     files = [f for f in os.listdir(os.getcwd()) if fnmatch.fnmatch(f, '[!_]*')]
     for f in files:
-        inst = f.split('_')[1].split('.')[0].translate(None, string.digits)
+        inst = re.findall(r'(?!=)([a-z1-9]*)(?=.wav)', f)
         for keys, abbr in abbr_dict.items():
             if str(inst) in set(keys):
                 new_name = format_string(abbr, f)
