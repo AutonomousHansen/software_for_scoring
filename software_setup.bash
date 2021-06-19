@@ -17,5 +17,4 @@ for i in *.wav;
 done
 }
 
-alias cb_to_film="python ~/sofware_for_scoring/cb_to_film.py"
-}' >> ~/.bash_profile
+alias cb_to_film="python ~/sofware_for_scoring/cb_to_film.py"' >> ~/.bash_profile
